@@ -1,0 +1,160 @@
+body{
+  min-height: 100vh;
+}
+
+/* 차트카테고리 */
+#category > h1 {
+  text-align: center;
+  color: #fff;
+}
+
+.category_wrap {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  margin-bottom: 50px;
+  border-bottom:2px solid #fff;
+}
+
+.categorybox {
+  background-color: #222;  
+  border-top: 2px solid #121212;
+  border-radius:10px 10px 0px 0px;
+  width: 20%;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  color: #D9D9D9;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.categorybox.active {
+  border-top: 2px solid #FF007A;
+  background-color:#fff;
+  box-sizing: border-box;
+  transition: 2s;
+  color: #121212;
+}
+
+.categorybox p{
+  font-weight: 600;
+
+}
+.category-title{
+  margin: 100px 0 30px;
+  text-align: center;
+}
+
+.category-title P{
+  margin: 0 auto;
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
+  border: 2px solid #D9D9D9;
+  border-radius: 40px;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* 차트영역1234 */
+.tab-box.active {
+  display: block;
+}
+
+.tab-box {
+  display: none;
+  width: 100%;
+  padding: 30px 0;
+  position: relative;
+  
+  margin-bottom: 100px;
+  border-radius: 30px;
+  overflow: hidden;
+  border:1px solid #979797;
+  background-color:#222;
+
+}
+.chart-nav{
+	position: absolute;
+	z-index: 20;
+	top:35px;
+	right:100px;
+}
+
+.sector p{
+  cursor: pointer;
+  line-height: 30px;
+}
+.sector p i{
+  margin-left: 10px;
+}
+
+.sector{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999; 
+  background-color: #fff;
+  padding: 2px 10px;
+  border: 2px solid #979797;
+}
+.sector .hide{
+  display:none;
+}
+
+.chart-area{
+  width: 100%;
+  height: 80%;
+  position: relative;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+
+.chart-area .chart-login{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  
+  width: 340px;
+  height: 140px;
+  background-color:#fff;
+  border: 1px solid #D9D9D9;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.chart-login .desc{
+  padding: 30px 0 10px 0;
+}
+
+.chart-login .btn span{
+  line-height: 60px;
+  padding: 5px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #979797;
+  color: #fff;
+}
+
+.explain{
+  margin-top: 30px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+
+
+.scroll-up a{
+  position: fixed;
+  bottom:230px;
+  right: 10%;
+}
+
+

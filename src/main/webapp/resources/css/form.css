@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+label{ float: left; }
+
+input,
+select {
+  padding:6px 12px;
+  margin: 1px;
+  box-sizing: border-box;
+
+}  
+
+   
+/* CSS 예제 */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  width: 100%; 
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+}
+
+.form-group textarea {
+  height: 100px;
+}

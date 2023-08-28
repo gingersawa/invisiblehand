@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <settings>
+    <setting name="logImpl" value="LOG4J2"/>
+    <!-- reg_id to regId -->
+    <setting name="mapUnderscoreToCamelCase" value="true"/>
+    <setting name="jdbcTypeForNull" value="NULL" />
+  </settings>
+  <typeAliases>
+    <typeAlias type="com.pcwk.ehr.VO.PostVO" alias="PostVO"/>
+    <typeAlias  type="com.pcwk.ehr.VO.PaymentInfoVO" alias="PaymentInfoVO"/>
+    <typeAlias type="com.pcwk.ehr.VO.CmnCodeVO"   alias="CmnCodeVO"/>
+    <typeAlias type="com.pcwk.ehr.VO.CommentVO" alias="CommentVO"/>
+    <!--
+    <typeAlias type="com.pcwk.ehr.code.domain.CodeVO"   alias="CodeVO"/>
+    <typeAlias type="com.pcwk.ehr.user.domain.UserVO"   alias="UserVO"/>
+    <typeAlias type="com.pcwk.ehr.user.domain.LevelPerMemberVO" alias="LevelPerMemberVO"/>
+    -->
+     <typeAlias type="com.pcwk.ehr.VO.MemberVO" alias="MemberVO"/>
+     <typeAlias type="com.pcwk.ehr.VO.ChartVO" alias="ChartVO"/>
+     <typeAlias type="com.pcwk.ehr.VO.RankVO" alias="RankVO"/>
+     <typeAlias type="com.pcwk.ehr.cmn.DTO" alias="DTO"/>
+  </typeAliases>
+</configuration>

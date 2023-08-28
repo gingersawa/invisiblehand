@@ -1,0 +1,79 @@
+ body {
+     background-color: #F3F3F3;
+     font-size: 16px;
+ }
+
+ .mypage-wrap {
+     margin: 100px auto;
+     width: 1200px;
+     height: 500px;
+     background-color: #fff;
+     border: 1px solid #979797;
+     border-radius: 30px;
+     padding: 50px;
+ }
+
+ .box-area {
+ 	 display: flex;
+     justify-content: center; 
+     flex-direction: column;
+     align-items: center;
+     width: 980px;
+     height: 290px;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+ }
+.info {
+    margin-bottom: 20px;
+}
+ .form-h3 {
+     text-align: center; 
+ }
+
+ .mybox {
+     width: 30%;
+     margin-right: 20px;
+ }
+
+ .mybox02 {
+     margin: 0 5%;
+      margin-left: 20px;
+ }
+
+ .mybox h2 {
+     height: 90px;
+     line-height: 90px;
+     font-size: 20px;
+     font-weight: bolder;
+ }
+
+ .my-info {
+     height: 130px;
+     margin-top: 30px;
+ }
+
+ .my-info-list span {
+     display: block;
+     margin-left: 15px;
+     padding: 5px 0;
+ }
+
+ .my-info-list span a {
+     color: #6c6c6c;
+ }
+
+ .label-margin {
+     text-align: center;
+     margin: 20px 0; 
+ }
+
+ .submit {
+     text-align: center; 
+     margin-top: 30px; 
+ }
+
+ h2, p, label, input, span, button {
+     font-size: 20px; 
+ }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">       
+<tiles-definitions>
+  <definition name="base-definition" template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+        <!-- 동적인 부분 -->
+        <put-attribute name="title" value=""/>
+        <put-attribute name="body" value=""/>
+        <!-- 정적인 부분 -->
+        
+        <put-attribute name="footer" value="/WEB-INF/views/tiles/template/footer.jsp"/>
+        <put-attribute name="css" value="/WEB-INF/views/tiles/template/footer.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/views/tiles/template/header.jsp"/>
+    </definition>
+
+
+    <!-- admin 폴더 -->
+    <definition name="admin/*" extends="base-definition">
+        <put-attribute name="title" value="보이지 않는 손"/>
+        <put-attribute name="body" value="/WEB-INF/views/admin/{1}.jsp"/>
+    </definition>
+    
+    <!-- chart 폴더-->
+    <definition name="chart/*" extends="base-definition">
+        <put-attribute name="title" value="보이지 않는 손"/>
+        <put-attribute name="body" value="/WEB-INF/views/chart/{1}.jsp"/>
+    </definition>
+  
+    
+  <!-- main 폴더 -->
+  <definition name="main/*" extends="base-definition">
+     <put-attribute name="title" value="보이지 않는 손"/>
+     <put-attribute name="body"  value="/WEB-INF/views/main/{1}.jsp"/>
+  </definition> 
+  
+  <!-- member 폴더 -->
+  <definition name="member/*" extends="base-definition">
+     <put-attribute name="title" value="보이지 않는 손"/>
+     <put-attribute name="body"  value="/WEB-INF/views/member/{1}.jsp"/>
+  </definition> 
+  
+  <!-- mypage 폴더 -->
+  <definition name="mypage/*" extends="base-definition">
+     <put-attribute name="title" value="보이지 않는 손"/>
+     <put-attribute name="body"  value="/WEB-INF/views/mypage/{1}.jsp"/>
+  </definition> 
+  
+  <!-- payment 폴더 -->
+  <definition name="payment/*" extends="base-definition">
+     <put-attribute name="title" value="보이지 않는 손"/>
+     <put-attribute name="body" value="/WEB-INF/views/payment/{1}.jsp"/>
+  </definition> 
+  
+  <!-- post 폴더 -->
+  <definition name="post/*" extends="base-definition">
+     <put-attribute name="title" value="보이지 않는 손"/>
+     <put-attribute name="body"  value="/WEB-INF/views/post/{1}.jsp"/>
+  </definition> 
+  
+  <!-- solution 폴더 -->
+  <definition name="solution/*" extends="base-definition">
+     <put-attribute name="title" value="보이지 않는 손"/>
+     <put-attribute name="body"  value="/WEB-INF/views/solution/{1}.jsp"/>
+  </definition> 
+
+</tiles-definitions>       

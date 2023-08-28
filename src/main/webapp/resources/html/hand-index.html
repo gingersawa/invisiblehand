@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="image/favicon-32x32.png">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
+<title>보이지 않는 손 레이아웃</title>
+</head>
+<body>
+  <!-- *---header Start---* -->
+	<header class="header">
+    <div class="inner">
+		<div class="logo">
+			<a href="#"><img src="image/pngaaa.com-589654.png" alt="logo" /></a>
+		</div>
+		<nav class="gnb_wrap">
+			<ul class="global_nav_bar">
+				<li><a href="#">차트정보</a></li>
+				<li><a href="#">마이기업솔루션</a></li>
+				<li><a href="#">커뮤니티</a></li>
+			</ul>
+			<ul class="local_nav_bar">
+				<li>
+					<ul class="sub-menu">
+						<li>서브메뉴1</li>
+						<li>서브메뉴1</li>
+						<li>서브메뉴1</li>
+						<li>서브메뉴1</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="sub-menu">
+						<li>서브메뉴2</li>
+						<li>서브메뉴2</li>
+						<li>서브메뉴2</li>
+						<li>서브메뉴2</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="sub-menu">
+						<li>자유게시판</li>
+						<li>QnA</li>
+						<li>공지사항</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="login">
+			<a href="#"><span>로그인</span></a>
+		</div>
+    </div>
+	</header>
+	
+	<!-- **---header End---** -->
+	<!-- *---container Start---* -->
+
+	<div class="h60px"></div>
+	<div class="container-1400 min-100vh con-main">
+		<div class="wrap-1000">
+			<section class="sec01 sec-news">뉴스 헤드라인 영역입니다
+				<div class="news-slide">
+					<div class="news">
+						<ul class="rolling">
+							<li><a href="#" class="link">뉴스헤드라인 01</a></li>
+							<li><a href="#" class="link">뉴스헤드라인 02</a></li>
+							<li><a href="#" class="link">뉴스헤드라인 03</a></li>
+							<li><a href="#" class="link">뉴스헤드라인 04</a></li>
+							<li><a href="#" class="link">뉴스헤드라인 05</a></li>
+						</ul>
+					</div>
+				</div>			
+			</section>
+			<section class="sec02 sec-chart">차트 영역입니다
+
+			
+			</section>
+			<section class="sec03 sec-board">커뮤니티 영역입니다</section>
+		</div><!-- **---wrap End---** -->
+		<div class="rank-area">
+			<ul>
+				<li>랭킹순서대로</li>
+				<li>랭킹순서대로</li>
+				<li>랭킹순서대로</li>
+				<li>랭킹순서대로</li>
+				<li>랭킹순서대로</li>
+				<li>랭킹순서대로</li>
+				<li>랭킹순서대로</li>
+				<li>랭킹순서대로</li>
+				<li>랭킹순서대로</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- **---container End---** -->
+	<!-- *---footer Start---* -->
+
+    <footer class="footer">
+		<div class="con-footer">
+			<div class="left-footer">
+			</div>
+			<div class="middle-footer">
+				<p>Copyright ⓒ 2023 by invisible hand. All pictures cannot be copied without permission.</p>
+			</div>
+			<div class="right-footer">
+			</div>
+		</div>
+    </footer>
+
+	<!-- **---footer End---** -->
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		var height =  $(".news").height(); //공지사항의 높이값
+		var num = $(".rolling li").length; // 공지사항의 개수
+		var max = height * num; //총 높이
+		var move = 0; //초기값을 설정
+		function noticeRolling(){
+			move += height; // move = move + height 값
+			$(".rolling").animate({"top":-move},600,function(){ 
+				if( move >= max ){ //if문을 통해 최대값보다 top값을 많이 올렸다면 다시
+					$(this).css("top",0); //0으로
+					move = 0; //초기값도 다시 0으로
+				};
+			});
+		};
+		noticeRollingOff = setInterval(noticeRolling,3000); //1000 = 1초마다 함수 실행
+		$(".rolling").append($(".rolling li").first().clone()); //마지막이 안보이므로 clone을 통해 첫번째li 복사
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body{
+	background-color: #F3F3F3;
+}
+
+.mypage-wrap{
+    margin: 100px auto;
+
+	width: 1200px;
+	height: 500px;
+    background-color: #fff;
+    border: 1px solid #979797;
+	border-radius:30px;
+    padding:50px;
+
+    position: relative;
+}
+
+.box-area{
+    display: flex;
+    width: 980px;
+    height: 290px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.mybox{
+    width: 30%;
+}
+.mybox02{
+    margin: 0 5%;
+}
+
+.mybox h2{
+    height: 90px;
+    line-height: 90px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.my-info{
+    height: 130px;
+    margin-top: 30px;
+}
+
+.my-info-list span{
+    display: block;
+    margin-left: 15px;
+    padding: 5px 0;
+}
+
+.my-info-list span a{
+    color: #6c6c6c;
+}
+
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none !important;
+    background-color: none !important;
+    color: fieldtext !important;
+}

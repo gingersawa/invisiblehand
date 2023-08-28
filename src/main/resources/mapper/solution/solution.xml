@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pcwk.ehr.solution">
+<!-- chart01 -->
+<!-- default임. maincategory 변수만 들어오면 해당 쿼리가 작동함. -->
+
+  <select id="SelectMaincategory" parameterType="ChartVO" resultType="ChartVO">
+    SELECT DISTINCT(MAINCATEGORY) FROM SBHITABLE
+  </select>
+  
+  <select id="SelectSubcategory" parameterType="ChartVO" resultType="ChartVO">
+    SELECT DISTINCT(SUBCATEGORY) FROM SBHITABLE
+    WHERE MAINCATEGORY = #{MAINCATEGORY}
+  </select>
+
+</mapper>

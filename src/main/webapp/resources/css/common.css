@@ -1,0 +1,531 @@
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: 'Pretendard-Regular';
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  background-color: #121212;
+  color:#fff;
+
+}
+
+a {
+  text-decoration: none;
+  color:#fff;
+}
+
+
+tr{
+	color:#fff;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+input{
+  color: #C6C6C6;
+}
+
+.text-c{text-align: center;}
+.text-l{text-align: left;}
+.text-r{text-align: right;}
+
+
+.line1px{
+  width:100%; 
+  height:1px;
+  background-color: #D9D9D9;
+  margin: 5px auto;
+}
+.line3px{
+  width:100%;
+  height:3px;
+  background-color: #D9D9D9;
+  margin: 5px auto;
+}
+
+.line1px.pur{
+
+  background-color: #6B53FF;
+
+}
+.line3px.pur{
+
+  background-color: #6B53FF;
+
+}
+
+.container-1400{
+  width:1400px;
+  margin:0 auto;
+
+}
+
+.con-main{
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.con-login{
+  position: relative;
+}
+
+
+
+.wrap-1000{
+  width:1000px;
+  margin:0 auto;
+}
+
+
+
+/* header------------------- */
+
+header{
+  border-bottom: 1px solid #000000;
+  height:60px;
+  width:100%;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  transition: 1s;
+  overflow: hidden;
+  background-color: #282828;
+}
+
+.header.act {
+    height: 250px;
+}
+
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    width: 1400px;
+    height: 60px;
+
+}
+
+.logo {
+
+    display: flex;
+
+    width: 200px;
+    height: 60px;
+    align-items: center;
+}
+
+
+.logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.gnb_wrap {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.mobile_gnb_wrap {
+    display: none;
+}
+
+.global_nav_bar,
+.local_nav_bar {
+    display: flex;
+    align-items: center;
+}
+
+.global_nav_bar li a {
+    color: #fff;
+    font-weight: 600;
+    transition: 1s;
+}
+
+.global_nav_bar li a:hover {
+    color: #979797;
+    font-weight: 600;
+}
+
+.global_nav_bar li {
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.global_nav_bar li span {
+    color: #000;
+    font-weight: 600;
+}
+
+.sub-menu {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.sub-menu li{
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 20px;
+
+}
+.sub-menu li a{
+	
+    color: #979797;
+    transition:0.5s;
+}
+.sub-menu li a:hover {
+    color: #fff;
+}
+
+
+.login {
+    cursor: pointer;
+}
+
+.login a span{
+	line-height:60px;
+	margin-right: 10px
+}
+
+.login-menu{
+	width: 120px;
+	display:flex;
+	align-items: center;
+	
+}
+
+.menu-btn-wrap{
+	width:60px;
+	height: 60px;
+}
+.menu-btn{
+	width: 30px;
+  height: 24px;
+	position: relative;
+	top:30%;
+	left:50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+	}
+
+.menu-btn span{
+  position: absolute;
+	display: block;
+	width:100%;
+	height:5px;
+	border-radius:5px;
+	background-color: #fff;	
+	transition:1s;
+}
+.menu-btn span:nth-child(1){
+	top:0;	
+}
+.menu-btn span:nth-child(2){
+	top:50%;
+  transform: translateY(-50%);
+}
+.menu-btn span:nth-child(3){
+	bottom:0;
+}
+
+.menu-btn span:nth-child(1).act{
+  top:50%;
+  transform: translateY(-50%) rotate(-45deg); 
+}
+.menu-btn span:nth-child(2).act{
+  opacity:0;
+}
+.menu-btn span:nth-child(3).act{
+  top:50%; 
+  transform: translateY(-50%) rotate(45deg);
+}
+
+
+
+/* 마이페이지 팝업 시작
+ * --------------------------------------- */
+
+.mypage-box{
+	width: 200px;
+	height: 150px;
+  position: relative;
+  left:73%;
+  text-align: right;
+}
+
+.mypage-box p{
+	display: block;
+}
+
+.mypage_pop p{
+  text-align: center;
+}
+
+.mypage_pop {
+    display:none;
+    position: fixed;
+    left: 66%;
+    top: 15px;
+    padding:50px;
+    background-color: #fff;
+    border-radius: 20px;
+    z-index: 20000;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.mypage_pop .fa-times-circle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+}
+
+.search_input {
+    display: flex;
+    margin-top: 60px;
+}
+
+.search_input .fa-search,
+.mypage_pop input {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.mypage_pop input {
+    background-color: #121212;
+    border: none;
+    width: 300px;
+    color: #fff;
+    padding-left: 50px;
+}
+
+.underline {
+    display: block;
+    height: 3px;
+    background: radial-gradient(#454d55 10%, transparent 70%);
+}
+
+.mypage_pop input:focus {
+    outline: none;
+}
+
+.mypage_btn {
+    margin-top: 30px;
+    width: 250px;
+    justify-content: right;
+}
+
+
+.mypage_btn .tag_button {
+    background-color: #454d55;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+
+.mypage_btn .tag_button p {
+    display:block;
+    line-height: 40px;
+    font-size: 16px;
+    padding: 0 15px;
+    color: #fff;
+}
+.mypage_btn .tag_button p a {
+    color: #fff;
+    display:block;
+    line-height: 40px;
+}
+
+
+
+
+/* 마이페이지 팝업 끝
+ * --------------------------------------- */
+
+
+/* wrap------------------- */
+.main-wrap{
+	padding: 50px 30px;
+	background-color: #000;
+	border-radius: 40px;
+	margin-top: 60px;
+	border:1px solid #222;
+	margin-bottom:100px;
+}
+
+
+
+
+
+/* section------------------- */
+.h30px{
+
+  height: 30px;
+}
+.h60px{
+  width: 100%;
+  height: 60px;
+}
+section{
+  background-color:#222;
+  margin-top:20px;
+  border-radius: 20px;
+}
+.con-main h4{
+	margin-top:50px;
+	padding-left:50px;
+}
+
+/* sec-news------------------- */
+.sec-news{
+  height:100px;
+  border-radius: 20px;
+}
+.news{
+  width:100%; 
+  height:100px; 
+  overflow:hidden;
+}
+.rolling{
+  position:relative; 
+  width:100%; 
+  height:auto;
+}
+.rolling li{
+  width:100%; 
+  text-align: center;
+  height:100px; 
+  line-height:100px;
+}
+
+.rolling li a{
+	font-size: 28px;
+	font-weight: 600px;
+}
+
+/* sec-chart------------------- */
+
+.sec-chart{
+	padding:50px 0px;
+  position: relative;
+  overflow: hidden;
+}
+.sec-chart text{
+	cursor: pointer;
+	
+}
+
+ 
+/* sec-board------------------- */
+.sec-board{
+  padding:50px;
+}
+
+.main-post-table{
+	width:100%;
+}
+
+.main-post-tbody tr td:nth-child(1){text-align: center;}
+
+/* rank-area------------------- */
+
+.rank-area{
+  margin-left:30px;
+  width:300px;
+  height:500px;
+  padding:25px;
+  border-radius:20px;
+
+  background-color: #000;
+  border:1px solid #222;
+}
+
+.main-rank-table{
+	width: 100%;
+	font-size:12px;
+	border-collapse: collapse;
+  border: none;
+}
+
+.main-rank-table tr{
+	width: 100%;
+  background-color:#222;
+  border:3px solid #000;
+  margin:5px 0;
+  border-radius: 10px;
+  height:36px;
+  text-align: center;
+   
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+.pagination a{
+  margin: 0 5px;
+}
+
+/* footer------------------- */
+
+
+footer{
+  width:100%;
+  height:200px;
+  background-color:#222;
+  color:#fff;
+  display: flex;
+  z-index: 200;
+}
+
+.con-footer{
+  width:80%;
+  margin: 0 auto;
+}
+
+.middle-footer{
+  height:200px;
+  text-align: center;
+}
+.middle-footer p{
+  line-height: 200px;
+  
+}
+  
+/* 너비설정클래스------------------- */
+.min-100vh{
+  min-height:100vh;
+  
+}
+
+.width80{
+  width:80%;
+}

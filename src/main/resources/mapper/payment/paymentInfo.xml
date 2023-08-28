@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pcwk.ehr.paymentInfo">
+  
+  <!-- 구독 결제 -->
+	<insert id="InsertInfo" parameterType="PaymentInfoVO">
+		<selectKey keyProperty="paymentinfoseq" resultType="int" order="BEFORE">
+	    SELECT paymentinfoseq.nextval FROM DUAL
+	  </selectKey>
+		INSERT INTO payment_information (
+		  paymentinfoseq
+		  , merchant_uid
+		  , name
+		  , amount
+		  , buyer_email
+		  , buyer_name
+		  , buyer_tel
+		) VALUES (
+			#{paymentinfoseq}
+		  , #{merchantUid}
+		  , #{name}
+		  , #{amount}
+		  , #{buyerEmail}
+		  , #{buyerName}
+		  , #{buyerTel}
+		)
+
+	</insert>
+	
+	<!-- 구독 정보 전체 조회 -->
+	<select id="getAll" parameterType="PaymentInfoVO" resultType="PaymentInfoVO" >
+	  SELECT 
+      paymentinfoseq
+      , merchant_uid
+      , name
+      , amount
+      , buyer_email
+      , buyer_name
+      , buyer_tel
+    FROM payment_information
+    WHERE buyer_email = #{buyerEmail}
+  </select>
+  
+  <!-- 구독 조회 -->
+	<select id="selectPaymentInfoByEmail" parameterType="PaymentInfoVO" resultType="PaymentInfoVO">
+		SELECT 
+	    paymentinfoseq
+      , merchant_uid
+      , name
+      , amount
+      , buyer_email
+      , buyer_name
+      , buyer_tel
+		FROM payment_information
+		WHERE buyer_email = #{buyerEmail}
+	</select>
+	
+  <!-- 구독 조회 -->
+	<select id="selectPaymentByMerchantUid" parameterType="PaymentInfoVO" resultType="PaymentInfoVO">
+		SELECT 
+	    paymentinfoseq
+      , merchant_uid
+      , name
+      , amount
+      , buyer_email
+      , buyer_name
+      , buyer_tel
+		FROM payment_information
+		WHERE merchant_uid = #{merchantUid}
+	</select>
+	
+	<!-- 결제 정보 업데이트 -->
+	<update id="updatePaymentInfo" parameterType="PaymentInfoVO">
+    UPDATE payment_information
+		SET  merchant_uid = #{merchantUid}
+		WHERE
+		buyer_email = #{buyerEmail}
+  </update>
+  
+  <!-- 결제 여부 확인 -->
+  <select id = "checkPaymentInfo" parameterType="PaymentInfoVO" resultType="int">
+    SELECT
+      COUNT(1)
+    FROM payment_information
+    WHERE buyer_email = #{buyerEmail}
+  </select>
+	
+</mapper>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pcwk.ehr.chart">
+<!-- chart01 -->
+<!-- default임. maincategory 변수만 들어오면 해당 쿼리가 작동함. -->
+
+  <select id="chartGraphAvg" parameterType="ChartVO" resultType="ChartVO">
+    SELECT
+	    TO_CHAR(chartdate,'YYYY.MM')AS chartdate,
+	    maincategory,
+	    ROUND(AVG(NVL(sbhi,0)) ,1) AS sbhiAvg ,
+	    ROUND(AVG(NVL(sbhi2,0)) ,1) AS sbhi2Avg,
+	    ROUND(AVG(NVL(sbhi3,0)) ,1) AS sbhi3Avg,
+	    ROUND(AVG(NVL(sbhi4,0)) ,1) AS sbhi4Avg,
+	    ROUND(AVG(NVL(sbhi5,0)) ,1) AS sbhi5Avg,
+	    ROUND(AVG(NVL(sbhi6,0)) ,1) AS sbhi6Avg,
+	    ROUND(AVG(NVL(sbhi7,0)) ,1) AS sbhi7Avg,
+	    ROUND(AVG(NVL(sbhi8,0)) ,1) AS sbhi8Avg,
+	    ROUND(AVG(NVL(sbhi9,0)) ,1) AS sbhi9Avg,
+	    ROUND(AVG(NVL(sbhi10,0)),1) AS sbhi10Avg
+    FROM
+      SBHITABLE
+    GROUP BY chartdate,maincategory
+    HAVING maincategory = #{maincategory}
+    ORDER BY chartdate
+  </select>
+
+  <!-- maincategory와 subcategory 변수가 들어오면 작동하는 쿼리 -->
+  <select id="chartGraph" parameterType="ChartVO"  resultType="ChartVO">
+    SELECT
+	    TO_CHAR(chartdate,'YYYY.MM') as chartdate,
+	    maincategory,
+	    subcategory,
+	    NVL(sbhi,0) AS sbhi,
+	    NVL(sbhi2,0) AS sbhi2,
+	    NVL(sbhi3,0) AS sbhi3,
+	    NVL(sbhi4,0) AS sbhi4,
+	    NVL(sbhi5,0) AS sbhi5,
+	    NVL(sbhi6,0) AS sbhi6,
+	    NVL(sbhi7,0) AS sbhi7,
+	    NVL(sbhi8,0) AS sbhi8,
+	    NVL(sbhi9,0) AS sbhi9,
+	    NVL(sbhi10,0)AS sbhi10
+    FROM
+      SBHITABLE
+    WHERE maincategory = #{maincategory}
+    AND subcategory = #{subcategory}
+    ORDER BY chartdate
+  </select>
+<!-- ////chart01 -->
+
+
+
+</mapper>

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.wrap_demo {
+  position: absolute; /* 부모 요소 안에서 절대 위치 설정이 가능하도록 지정합니다. */
+  top: 40%; /* 수직 방향으로 50% 이동 */
+  left: 50%; /* 수평 방향으로 50% 이동 */
+  transform: translate(-50%, -50%);
+}
+
+#kakaoHead {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#paymentBtn {
+	display: flex;
+  justify-content: center;
+	align-items: center;
+  margin-bottom: 30px;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FF8200;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-11 {
+       background-image: linear-gradient(to right, #FFFF8C, #FFEB46, #FFFF96, #FFE641);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}

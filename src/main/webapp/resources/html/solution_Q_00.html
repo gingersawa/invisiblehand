@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/solution.css">
+<link rel="stylesheet" href="css/common.css">
+<style>
+    body{
+        background-image: url(image/que-blur.jpg);
+    }
+</style>
+<title>임시메뉴</title>
+</head>
+<body>
+  <div class="h60px" style="height: 80px;"></div>
+	<div class="container-1400 Q_00">
+        <div class="pop-que">
+            <h5>
+                귀사의 업체 종목을<br>"제조업 또는 비제조업" 에서 선택해 주십시오.
+            </h5>
+            <div class="btn">
+                <button type="button" onclick="move01();">제조업</button>
+                <button type="button" onclick="move02();">비제조업</button>
+            </div>
+        </div>
+	</div> <!-- **---container End---** -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script >
+        function move01(){
+            location.href = "solution_Q_01.html";
+        }
+        function move02(){
+            location.href = "solution_Q_02.html";
+        }
+    </script>
+</body>
+</html>

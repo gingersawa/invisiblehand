@@ -1,0 +1,159 @@
+
+
+/* Q_00 */
+
+.Q_00{
+    position: relative;
+    height: 100vh;
+    background:no-repeat url("../image/solution-bg.jpg") cover;
+}
+.pop-que{
+    width: 400px;
+    height: 200px;
+    background-color: #222;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    border:1px solid #00FFF0;
+    padding: 30px;
+}
+
+h5{
+    text-align: center;
+    margin: 35px 0;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+}
+
+.btn{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.btn a{
+	color:#fff;
+	border-radius: 10px;
+  border:1px solid #00FFF0;
+  padding:10px;
+  width: 120px;
+  text-align: center;
+}
+
+
+/* Q_01~02 */
+
+h2{
+    color:#00FFF0;
+    margin: 70px 0 0 90px;
+}
+h4{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 25px 0;
+}
+p{
+    margin: 15px 0 15px 120px;
+    color: #979797;
+    font-size: 12px;
+    
+}
+
+label{
+    color: #fff;
+}
+.radio{
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
+    font-size: 15px;
+    margin: 15px 10px;
+}
+
+.cntr{
+    display: flex;
+    justify-content: space-between;
+}
+
+.que-wrap{
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid #00FFF0;
+    border-radius: 30px;
+
+
+}
+.que-wrqp-flex{
+    display: flex;
+    justify-content: space-between;
+}
+.que-box{
+    width: 30%;
+    color:#fff;
+}
+:root{
+    accent-color:#00FFF0;
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+}
+.line .radio{
+    width: 30%;
+}
+
+.line06{
+    justify-content:flex-start;
+}
+.radio16{
+    margin-right: 20px;
+}
+
+.percent{
+    line-height: 25px;
+    text-align: right;
+
+}
+.submit{
+    padding: 50px 0;
+    width: 800px;
+    margin: 0 auto;
+    text-align: end;
+}
+.go-result{
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #00FFF0;
+    padding: 10px 25px;
+    border: 1px solid #00FFF0;
+    font-weight: 600;
+    color: #121212;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.go-result:hover{
+    cursor: pointer;
+    background-color: #121212;
+    border: 1px solid #00FFF0;
+    color: #00FFF0;
+}
+
+input{
+    background-color: #121212;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+input.hidden{
+    margin-right: 5px;
+}

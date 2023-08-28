@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pcwk.ehr">
+
+	<select id="doSearch" parameterType="com.pcwk.ehr.VO.CmnCodeVO" resultType="com.pcwk.ehr.VO.CmnCodeVO">
+			SELECT codedetail,
+			       codedetailname
+			FROM common_code_table
+			WHERE isused = 'Y'
+			  AND mastercode = #{masterCode}
+			ORDER BY codeorder
+
+	</select>
+
+</mapper>
